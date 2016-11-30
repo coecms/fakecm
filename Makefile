@@ -23,4 +23,14 @@ mom5xx: driver.o ocean_state.o main.F90
 %_state.o: state.F90 %.x
 	${FC} -c ${CPPFLAGS} -DXFILE=\"$*.x\" ${FCFLAGS} -o $@ $< 
 
-atmos.o: atmos.x
+atmos.x: namcouple
+	bash ./process.sh
+
+
+# Dummy targets
+ocean.x: atmos.x
+	@
+
+ice.x: atmos.x
+	@
+
