@@ -9,3 +9,9 @@ Grab a `namcouple` file, put it in this directory. Running `process.sh` will ext
 You may need to mess about inside `main.F90` to get each model sending/receiving in the correct order as in the full model
 
 You can then run the fake model as desired to play with oasis sequencing etc., without the hassle of running a full model.
+
+# Use cases
+
+ * Check coupled field sequencing
+
+ * Mock out components while debugging a single model
